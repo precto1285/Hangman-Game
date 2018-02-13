@@ -12,44 +12,25 @@
 			var name1 = ["anthony", "dan", "jan", "cameron", "guillermo", "travell"];
 			var win = 0;
 			var loss = 0;
+			var correctLetter = onkeypress;
 			var wrongLetter = [];
             var guesses = 9;
             var blankLetter = [" _ "];
             var ranName;
 			var winCounter = 0;
 
-			alert("Hangman!!! Dead Men Tell No Tales...");
-			
-			//User input
-			var attempt = prompt("Please type a letter...");
-						
-				
-			
-			
-			function startGame(ranName, attempt) {
+			alert("Hangman!");
+
+			function gameStart {
 				//This pulls a random value from var name1 and converts the letters into underscores
 			var ranName = name1[Math.floor(Math.random() * name1.length)];
 			var str = ranName;
 			var res = str.replace( /[a-z]/g, blankLetter);
 			document.write(res);
-
-				if (ranName === attempt){
-					(guesses - 1);
-					document.write("you got one!" + "Name: " + ranName);
-				}
-				else{
-					document.write("Game Over, you are hung!");
-				}
-			}
+		
+		}
 			
-
-
-
-
-			
-
-			
-
+		
 			
 			
 			
