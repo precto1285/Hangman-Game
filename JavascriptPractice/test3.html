@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta charset = UTF-8>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>HANGMAN!</h1>
+        </header>
+
+        <div id="blanks"></div>
+        <br>
+        <div id="correctGuess"></div>
+        <br>
+        <div id="wrongGuess"></div>
+        <br>
+        <div id="winLose"></div>
+
+        <script>
+
+            var myArray = ["man", "woman", "boy", "girl"];
+
+            var choice = myArray[Math.floor(Math.random() * myArray.length)];
+
+            var underScore = "";
+
+            for(var i = 0; i < choice.length; i++){
+                underScore += "_ "
+            }
+            document.getElementById("blanks").innerHTML = underScore;
+
+
+
+
+            
+            // use onkeyup for user input
+            // use charSet for picking letters in a string
+            // use for loop to have the system go through each letter to see if the user input matches an index in the random string
+            // 
+
+            
+               
+                    
+               
+            
+
+
+
+        </script>
+    
+    
+    
+    </body>
+
+</html>
