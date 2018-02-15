@@ -25,7 +25,12 @@
 
             //global variables/arrays
 
-            var myArray = ["man", "woman", "boay", "gairl"];
+            var man = ["m", "a", "n"]
+            var woman = ["w", "o", "m", "a", "n"]
+            var boy = ["b", "o", "y"]
+            var girl = ["g", "i", "r", "l"]
+
+            var myArray = [man, woman, boy, girl];
             var underScore = "";
 
             var winCount = 0;
@@ -54,6 +59,7 @@
              
 
                     // create a way for picking letters in a string and compare them to user input
+                    for(var i = 0; i < choice.length; i++){
                     if(userInput == choice){
                         {
                         alert("Eureka!");
@@ -68,7 +74,7 @@
                         }
                     
                     document.getElementById("correctGuess")
-                                        
+                }                    
             /* use for loop to have the system go through each letter to see if the 
             user input matches an index in the random string 
      
