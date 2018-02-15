@@ -17,36 +17,81 @@
         <br>
         <div id="correctGuess"></div>
         <br>
-        <div id="wrongGuess"></div>
+        <div id="wrongGuesses"></div>
         <br>
         <div id="winLose"></div>
 
         <script>
 
-            var myArray = ["man", "woman", "boy", "girl"];
+            //global variables/arrays
+
+            var myArray = ["man", "woman", "boay", "gairl"];
+            var underScore = "";
+
+            var winCount = 0;
+            var loseCount = 0;
+
+            var wrongGuess = 0;
+
+            
+
+            //Chooses a random word from myArray
 
             var choice = myArray[Math.floor(Math.random() * myArray.length)];
 
-            var underScore = "";
+            
+            
+            //replace random word with blanks...
 
             for(var i = 0; i < choice.length; i++){
                 underScore += "_ "
             }
             document.getElementById("blanks").innerHTML = underScore;
+         
+            // create a way for the user input letter choices.
 
+            var userInput = prompt("pick a letter from a-z");
+             
 
+                    // create a way for picking letters in a string and compare them to user input
+                    if(userInput == choice){
+                        {
+                        alert("Eureka!");
+                        userInput += underScore; 
+                        }
+                    }
 
-
-            
-            // use onkeyup for user input
-            // use charSet for picking letters in a string
-            // use for loop to have the system go through each letter to see if the user input matches an index in the random string
-            // 
-
-            
-               
+                    else{
+                        alert("Sorry, Try again");
+                        wrongGuess + 1;
+                        
+                        }
                     
-               
+                    document.getElementById("correctGuess")
+                                        
+            /* use for loop to have the system go through each letter to see if the 
+            user input matches an index in the random string 
+     
+                    
+
+
+            // for correct guesses, use for loop to replace blanks with correct letter/s.
+
+
+            //when all letters are filled before or at 10 attempts, user wins!
+            if (){
+                alert("YOU WIN!");
+            }
+            
+            
+            //when number of choices exceeds 10 attempts, user loses
+            else{
+                alert("Sorry, You have been Hung");
+            }*/
+
+            
+                    
+              
             
 
 
