@@ -9,9 +9,11 @@
             
             var underScore = "";
 
+            var numGuess = 10;
+
             var winCount = 0;
             var loseCount = 0;
-            var wrongGuess = 0;
+            var wrongGuess = [];
      
 
             //Chooses a random word from myArray
@@ -27,22 +29,70 @@
          
             // create a way for the user input letter choices.
 
-            var userInput = prompt("pick a letter from a-z");
+            
              
 
                     // create a way for picking letters in a string and compare them to user input
-                
+
+                   document.onkeyup= function(event) {
+                        var userInput = event.key;
+                    
+                    
+                    
+
                     for(var i = 0; i < choice.length; i++){
-                    if(userInput == choice.charSet){
-                        alert("Eureka!");
-                        underScore[i] += userInput; 
+                                                
+                        if(choice == man){
+                            if (userInput == man[0]){}
+                            if (userInput == man[1]){}
+                            if (userInput == man[2]){}    
                         }
-                    else{
+                        else{
                         alert("Sorry, Try again");
-                        userInput.push(wrongGuess);                    
+                        wrongGuess.push(userInput);                    
                         }
                         document.getElementById("wrongGuesses");
-                    }
+                        
+                        if(choice == woman){
+                            if (userInput == woman[0]){}
+                            if (userInput == woman[1]){} 
+                            if (userInput == woman[2]){} 
+                            if (userInput == woman[3]){} 
+                            if (userInput == woman[4]){} 
+
+                        }
+                        else{
+                            alert("Sorry, Try again");
+                            wrongGuess.push(userInput);                    
+                            }
+                            document.getElementById("wrongGuesses");
+                        
+                        if(choice == boy){
+                            if (userInput == boy[0]){}
+                            if (userInput == boy[2]){}
+                            if (userInput == boy[3]){}                         
+                        }
+                        else{
+                                alert("Sorry, Try again");
+                                wrongGuess.push(userInput);                    
+                                }
+                                document.getElementById("wrongGuesses");
+
+                        if(choice == girl){
+                            if (userInput == girl[0]){}
+                            if (userInput == girl[1]){}   
+                            if (userInput == girl[2]){}   
+                            if (userInput == girl[3]){}                           
+                        }
+                        else{
+                                alert("Sorry, Try again");
+                                wrongGuess.push(userInput);                    
+                                }
+                                document.getElementById("wrongGuesses");
+                        }
+                    } 
+                  
+
                         
             /* use for loop to have the system go through each letter to see if the 
             user input matches an index in the random string 
