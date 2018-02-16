@@ -29,7 +29,7 @@
          
             // create a way for the user input letter choices.
 
-            
+
              
 
                     // create a way for picking letters in a string and compare them to user input
@@ -43,9 +43,9 @@
                     for(var i = 0; i < choice.length; i++){
                                                 
                         if(choice == man){
-                            if (userInput == man[0]){}
-                            if (userInput == man[1]){}
-                            if (userInput == man[2]){}    
+                            if (userInput == man[0]){/*replace underscore with user input*/}
+                            if (userInput == man[1]){/*replace underscore with user input*/}
+                            if (userInput == man[2]){/*replace underscore with user input*/}    
                         }
                         else{
                         alert("Sorry, Try again");
@@ -54,11 +54,11 @@
                         document.getElementById("wrongGuesses");
                         
                         if(choice == woman){
-                            if (userInput == woman[0]){}
-                            if (userInput == woman[1]){} 
-                            if (userInput == woman[2]){} 
-                            if (userInput == woman[3]){} 
-                            if (userInput == woman[4]){} 
+                            if (userInput == woman[0]){/*replace underscore with user input*/}
+                            if (userInput == woman[1]){/*replace underscore with user input*/} 
+                            if (userInput == woman[2]){/*replace underscore with user input*/} 
+                            if (userInput == woman[3]){/*replace underscore with user input*/} 
+                            if (userInput == woman[4]){/*replace underscore with user input*/} 
 
                         }
                         else{
@@ -68,9 +68,9 @@
                             document.getElementById("wrongGuesses");
                         
                         if(choice == boy){
-                            if (userInput == boy[0]){}
-                            if (userInput == boy[2]){}
-                            if (userInput == boy[3]){}                         
+                            if (userInput == boy[0]){/*replace underscore with user input*/}
+                            if (userInput == boy[2]){/*replace underscore with user input*/}
+                            if (userInput == boy[3]){/*replace underscore with user input*/}                         
                         }
                         else{
                                 alert("Sorry, Try again");
@@ -79,10 +79,10 @@
                                 document.getElementById("wrongGuesses");
 
                         if(choice == girl){
-                            if (userInput == girl[0]){}
-                            if (userInput == girl[1]){}   
-                            if (userInput == girl[2]){}   
-                            if (userInput == girl[3]){}                           
+                            if (userInput == girl[0]){/*replace underscore with user input*/}
+                            if (userInput == girl[1]){/*replace underscore with user input*/}   
+                            if (userInput == girl[2]){/*replace underscore with user input*/}   
+                            if (userInput == girl[3]){/*replace underscore with user input*/}                           
                         }
                         else{
                                 alert("Sorry, Try again");
