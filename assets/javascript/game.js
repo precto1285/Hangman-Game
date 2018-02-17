@@ -26,14 +26,11 @@
                 underScore += "_ "
                 document.getElementById("blanks").innerHTML = underScore;
             }
-
+//__________________________________________________________________________________________________________________________________________
                     // create a way for picking letters in a string and compare them to user input
                     
                 document.onkeyup = function(event) {
                     var userInput = event.key;
-
-
-
                         if(compChoice === man){
                             if (userInput === man[0]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[0];    
@@ -43,27 +40,32 @@
                             }
                             if (userInput === man[2]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[2];    
-                            }       
+                            }
+                            else{
+                                console.log("Sorry, Try again");
+                                document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
+                                }       
                         }
-
                         if(compChoice === woman){
                             if (userInput === woman[0]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[0];   
                             }
                             if (userInput === woman[1]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[1];   
-                            } 
+                            }
                             if (userInput === woman[2]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[2];    
-                            } 
+                            }
                             if (userInput == woman[3]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[3];    
-                            } 
+                            }
                             if (userInput === woman[4]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[4];   
-                            } 
+                            }else{
+                                console.log("Sorry, Try again");
+                                document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
+                                } 
                         }   
-
                         if(compChoice === boy){
                             if (userInput === boy[0]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[0];   
@@ -74,28 +76,30 @@
                             if (userInput === boy[2]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[2];    
                                 }
+                            else{
+                                console.log("Sorry, Try again");
+                                document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
+                                }
                         }
-
                         if (compChoice === girl){                     
                             if (userInput === girl[0]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[0];   
                             }
                             if (userInput === girl[1]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[1];   
-                            }   
+                            }
                             if (userInput === girl[2]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[2];    
-                            }   
+                            }
                             if (userInput === girl[3]){
                                 document.getElementById("blanks").innerHTML = userInput += underScore[3];    
-                            }                           
+                            }
+                            else{
+                                console.log("Sorry, Try again");
+                                document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
+                                }                           
                         }
                         
-                        else{
-                            console.log("Sorry, Try again");
-                            document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
-                            }
-
                 }            
                         
 
