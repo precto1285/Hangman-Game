@@ -1,14 +1,83 @@
 
 //global variables/arrays
 
-var man = ["m", "a", "n"];
-var woman = ["w", "o", "m", "a", "n"];
-var boy = ["b", "o", "y"];
-var girl = ["g", "i", "r", "l"];
-var myArray = [man, woman, boy, girl];
+var Philippe = {
+    "p": "unselected", 
+    "h": "unselected", 
+    "i": "unselected", 
+    "l": "unselected", 
+    "i": "unselected", 
+    "p": "unselected", 
+    "p": "unselected", 
+    "e": "unselected"
+    };
+console.log(Philippe);
+var Anthony = {
+    "a": "unselected", 
+    "n": "unselected", 
+    "t": "unselected", 
+    "h": "unselected", 
+    "o": "unselected", 
+    "n": "unselected", 
+    "y": "unselected"
+    };
+console.log(Anthony);
+var Guillermo = {
+    "g": "unselected", 
+    "u": "unselected", 
+    "i": "unselected", 
+    "l": "unselected", 
+    "l": "unselected", 
+    "e": "unselected", 
+    "r": "unselected", 
+    "m": "unselected", 
+    "o": "unselected"
+    };
+console.log(Guillermo);
+var Jan = {
+    "j": "unselected", 
+    "a": "unselected", 
+    "n": "unselected"
+    };
+console.log(Jan);
+var Dan = {
+    "d": "unselected", 
+    "a": "unselected", 
+    "n": "unselected"
+    };
+console.log(Dan);
+var Travell = {
+    "t": "unselected", 
+    "r": "unselected", 
+    "a": "unselected", 
+    "v": "unselected", 
+    "e": "unselected", 
+    "l": "unselected", 
+    "l": "unselected"
+    };
+console.log(Travell);
+var Cameron = {
+    "c": "unselected", 
+    "a": "unselected", 
+    "m": "unselected", 
+    "e": "unselected", 
+    "r": "unselected", 
+    "o": "unselected", 
+    "n": "unselected"
+    };
+console.log(Cameron);
+var Diego = {
+    "d": "unselected", 
+    "i": "unselected", 
+    "e": "unselected", 
+    "g": "unselected", 
+    "o": "unselected"
+    };
+console.log(Diego);
+var myArray = [Philippe, Anthony, Guillermo, Jan, Dan, Travell, Cameron, Diego];
 
 var letterState = [];
-
+console.log(letterState);
 var dupeLetters = 0;
 
 var numGuess = 10;
@@ -17,13 +86,20 @@ var winCount = 0;
 var loseCount = 0;
 var correctGuess = 0;
 var wrongGuess = [];
+console.log(wrongGuess);
 var correctAnswer = "";
+console.log(correctAnswer);
 var compChoice = "";
 
-console.log(man);
-console.log(woman);
-console.log(boy);
-console.log(girl);
+
+
+
+
+
+
+
+
+
 console.log(myArray);
 console.log(letterState);
 console.log(dupeLetters);
@@ -33,7 +109,7 @@ console.log(loseCount);
 console.log(wrongGuess);
 console.log(correctGuess);
 console.log(correctAnswer);
-console.log(compChoice);
+
 
 
 //Chooses a random word from myArray
@@ -50,7 +126,7 @@ alert("HANGMAN!!!");
 
 function startGame() {
     compChoice = myArray[Math.floor(Math.random() * myArray.length)];
-
+    console.log(compChoice);
     var underScore = "";
     console.log(underScore);
     wrongGuess.length = 0;
@@ -74,21 +150,25 @@ document.onkeyup = function (event) {
     userInput = userInput.toLowerCase();
     dupeLetters = 0;
     for (var i = 0; i < compChoice.length; i++) {
-        if (userInput === compChoice[i].key && compChoice[i].value === "correct") {
-            correctAnswer += compChoice[i];
+        if (userInput === compChoice[i].key && compChoice[i].value === "blanks") {
+            var gotcha = correctAnswer += compChoice[i];
+            document.getElementById("blanks").innerHTML = gotcha ;
+            console.log(gotcha);
+            console.log(compChoice[i].key);
+            console.log(compChoice[i].value);
         }
         else if (userInput === compChoice[i].key && compChoice[i].value === "unselected") {
-            compChoice[i].value = "correct";
+            compChoice[i].value = "blanks";
             dupeLetters++;
             numGuess--;
             document.getElementById("guessesLeft").innerHTML = numGuess;
         }
-        else if (compChoice[i].value === "correct") {
+        else if (compChoice[i].value === "blanks") {
             correctAnswer += compChoice[i];
 
         }
         else {
-            correctAnswer += "_ ";
+            correctAnswer += "_ " ;
         }
 
     }
@@ -126,16 +206,16 @@ document.onkeyup = function (event) {
 
     if (numGuess === 0) {
         loseCount++;
-        alert("You Suck!");
+        alert("Nice Try!");
         document.getElementById("loseCount").innerHTML = loseCount;
         startGame();
     }
 }
 
+//Sigh...I couldn't de-bug it! It is so frustrating!!!!!!!!!!!!!!!!!!!!!!! :(
 
 
-
-/*               
+/*       original attempt:        
                         if(compChoice === man){
                         document.onkeyup = function(event) {
                                var userInput = event.key;
