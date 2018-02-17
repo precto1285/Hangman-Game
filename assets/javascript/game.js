@@ -14,99 +14,100 @@
             var winCount = 0;
             var loseCount = 0;
             var wrongGuess = [];
-     
+
 
             //Chooses a random word from myArray
 
-            var choice = myArray[Math.floor(Math.random() * myArray.length)];
+            var compChoice = myArray[Math.floor(Math.random() * myArray.length)];
                         
             //replace random word with blanks...
 
-            for(var i = 0; i < choice.length; i++){
+            for(var i = 0; i < compChoice.length; i++){
                 underScore += "_ "
+                document.getElementById("blanks").innerHTML = underScore;
             }
-            document.getElementById("blanks").innerHTML = underScore;
-         
-            // create a way for the user input letter choices.
-
-
-             
 
                     // create a way for picking letters in a string and compare them to user input
-
-                   document.onkeyup= function(event) {
-                        var userInput = event.key;
                     
-                    
-                    
+                document.onkeyup = function(event) {
+                    var userInput = event.key;
 
-                    for(var i = 0; i < choice.length; i++){
-                                                
-                        if(choice == man){
-                            if (userInput == man[0]){/*replace underscore with user input*/}
-                            if (userInput == man[1]){/*replace underscore with user input*/}
-                            if (userInput == man[2]){/*replace underscore with user input*/}    
-                        }
-                        else{
-                        alert("Sorry, Try again");
-                        wrongGuess.push(userInput);                    
-                        }
-                        document.getElementById("wrongGuesses");
-                        
-                        if(choice == woman){
-                            if (userInput == woman[0]){/*replace underscore with user input*/}
-                            if (userInput == woman[1]){/*replace underscore with user input*/} 
-                            if (userInput == woman[2]){/*replace underscore with user input*/} 
-                            if (userInput == woman[3]){/*replace underscore with user input*/} 
-                            if (userInput == woman[4]){/*replace underscore with user input*/} 
 
-                        }
-                        else{
-                            alert("Sorry, Try again");
-                            wrongGuess.push(userInput);                    
+
+                        if(compChoice === man){
+                            if (userInput === man[0]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[0];    
                             }
-                            document.getElementById("wrongGuesses");
-                        
-                        if(choice == boy){
-                            if (userInput == boy[0]){/*replace underscore with user input*/}
-                            if (userInput == boy[2]){/*replace underscore with user input*/}
-                            if (userInput == boy[3]){/*replace underscore with user input*/}                         
+                            if (userInput === man[1]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[1];   
+                            }
+                            if (userInput === man[2]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[2];    
+                            }       
                         }
-                        else{
-                                alert("Sorry, Try again");
-                                wrongGuess.push(userInput);                    
+
+                        if(compChoice === woman){
+                            if (userInput === woman[0]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[0];   
+                            }
+                            if (userInput === woman[1]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[1];   
+                            } 
+                            if (userInput === woman[2]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[2];    
+                            } 
+                            if (userInput == woman[3]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[3];    
+                            } 
+                            if (userInput === woman[4]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[4];   
+                            } 
+                        }   
+
+                        if(compChoice === boy){
+                            if (userInput === boy[0]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[0];   
+                            }
+                            if (userInput === boy[1]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[1];   
+                            }
+                            if (userInput === boy[2]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[2];    
                                 }
-                                document.getElementById("wrongGuesses");
-
-                        if(choice == girl){
-                            if (userInput == girl[0]){/*replace underscore with user input*/}
-                            if (userInput == girl[1]){/*replace underscore with user input*/}   
-                            if (userInput == girl[2]){/*replace underscore with user input*/}   
-                            if (userInput == girl[3]){/*replace underscore with user input*/}                           
                         }
-                        else{
-                                alert("Sorry, Try again");
-                                wrongGuess.push(userInput);                    
-                                }
-                                document.getElementById("wrongGuesses");
-                        }
-                    } 
-                  
 
+                        if (compChoice === girl){                     
+                            if (userInput === girl[0]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[0];   
+                            }
+                            if (userInput === girl[1]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[1];   
+                            }   
+                            if (userInput === girl[2]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[2];    
+                            }   
+                            if (userInput === girl[3]){
+                                document.getElementById("blanks").innerHTML = userInput += underScore[3];    
+                            }                           
+                        }
                         
-            /* use for loop to have the system go through each letter to see if the 
-            user input matches an index in the random string 
-     
-            // for correct guesses, use for loop to replace blanks with correct letter/s.
+                        else{
+                            console.log("Sorry, Try again");
+                            document.getElementById("wrongGuess").innerHTML = wrongGuess;                    
+                            }
 
+                }            
+                        
 
-            //when all letters are filled before or at 10 attempts, user wins!
-            if (){
-                alert("YOU WIN!");
+/*
+            if (all the letters have been guessed correctly) {
+                alert("You Got it!");
+                winCount + 1;
+            }    
+            
+            if (wrongGuess == 10){
+                console.log("Sorry, You have been Hung");
+                loseCount + 1;
             }
             
-            
-            //when number of choices exceeds 10 attempts, user loses
-            else{
-                alert("Sorry, You have been Hung");
-            }*/
+*/            
