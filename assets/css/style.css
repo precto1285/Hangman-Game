@@ -1,15 +1,17 @@
 body{
-    background-color:pink;
+    background-image:url(../images/Noose.png);
+    background-size:100%;
     margin-left:100px;
     margin-right:100px;
     align-content:center;
     text-align:center;
     font-size:24pt;
+    color: white;
 }
 header{
-    background-color:blue;
+    background-image:url(../images/Rope.png);
     color:white;
-    width:50%;
+    width:80%;
     align-content:center;
     text-align:center;
     margin:auto;
@@ -20,6 +22,7 @@ header{
     background-color:grey;
     color:yellow;
     margin:auto;
+    opacity:0.8;
 }
 sidebar{
     background-color:beige;
@@ -29,4 +32,7 @@ footer{
     border:solid;
     margin:auto;
 
+}
+h3{
+    opacity:1.0;
 }
