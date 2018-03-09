@@ -49,9 +49,8 @@ startGame();
 
 
 document.onkeyup = function (event) {
-    console.log("lakfvjaef;lna");
     userChoice = event.key;
-
+    console.log(userChoice);
 
 
 
@@ -59,8 +58,10 @@ document.onkeyup = function (event) {
         console.log("true");
         underScores += userChoice;
         guessesLeft--;
-
-        var replaceLetter = result.indexOf(userChoice);
+        correctLetter = JSON.stringify(result);
+        console.log(correctLetter);
+        var replaceLetter = correctLetter.indexOf(userChoice);
+        console.log(replaceLetter);
         //I still need to insert letter to underscore. only pulling interger at this moment.
         document.getElementById("blanks").innerHTML = replaceLetter;
         document.getElementById("guessesLeft").innerHTML = guessesLeft;

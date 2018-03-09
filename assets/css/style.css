@@ -20,11 +20,11 @@ header{
     
 }
 .container{
-    /* width:80%; */
+    width:80%;
     background-color:grey;
     border:solid;
     border-radius: 100px;
-    color:yellow;
+    color:rgb(48, 248, 8);
     margin:auto;
     opacity:0.8;
 }
@@ -36,7 +36,4 @@ footer{
     border:ridge;
     margin:auto;
 
-}
-h3{
-    opacity:1.0;
 }
