@@ -1,3 +1,6 @@
+window.onload = function(){
+
+
 //create global variables
 var names = ["Phil", "Robert", "Joseph", "Timothy", 
 "Randy", "Jacob", "Adam", "Thomas", "Edward", "William", 
@@ -16,10 +19,10 @@ var wrongGuess = "";
 //initiate game
 function startGame() {
 
-    delete compChoice;
-    delete underScores;
-    delete userChoice;
-    delete wrongGuess;
+    compChoice = "";
+    underScores = "";
+    userChoice = "";;
+    wrongGuess = "";
     guessesLeft = 10;
     //reset all
 
@@ -38,35 +41,69 @@ function startGame() {
     document.getElementById("winCount").innerHTML = winCount;
     document.getElementById("loseCount").innerHTML = loseCount;
 
+}
+
 
 startGame();
 
 
-}
+
 document.onkeyup = function (event) {
+    console.log("lakfvjaef;lna");
     userChoice = event.key;
 
 
+
+
+    if(result.includes(userChoice)){
+        console.log("true");
+        underScores += userChoice;
+        guessesLeft--;
+
+        var replaceLetter = result.indexOf(userChoice);
+        //I still need to insert letter to underscore. only pulling interger at this moment.
+        document.getElementById("blanks").innerHTML = replaceLetter;
+        document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
+    }
+    else{
+        console.log("false");
+        wrongGuess += userChoice;
+        guessesLeft--;
+        document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    }
+
+/*
     //if: user choice equals any letter from underScore:  
     for (var i = 0; i < result.length; i++) {
-        secretLetter = result[i].toLowerCase();
+        console.log("forloop");
+        var secretLetter = result[i].toLowerCase();
 
 
         if (userChoice === secretLetter) {
-            //replace any "_ " with letter chosen
+            console.log("firing");
+            //replace any "_ " with letter chosen 
+
+
+
             for (var i = 0; i < result.length; i++) {
                 underScores += userChoice;
                 guessesLeft--;
+                document.getElementById("guessesLeft").innerHTML = guessesLeft;
             }
-
+            
 
         }
-        else if (userChoice !== secretLetter) {
+        if (userChoice !== secretLetter) {
+            console.log("user");
             wrongGuess += userChoice;
             guessesLeft--;
+            document.getElementById("guessesLeft").innerHTML = guessesLeft;
 
-        };
-    }
+        }
+        
+        
+    } */
 
     //if: all underScores are replaced, alert You Won!, increment winCount by 1 and reset game.
     if (underScores.length === 0) {
@@ -83,5 +120,7 @@ document.onkeyup = function (event) {
         loseCount++
         startGame();
     }
+
+}
 
 }
