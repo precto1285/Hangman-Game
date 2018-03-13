@@ -53,12 +53,11 @@ document.onkeyup = function (event) {
     console.log(userChoice);
 
 
-
     if(result.includes(userChoice)){
         console.log("true");
         underScores += userChoice;
         guessesLeft--;
-        correctLetter = JSON.stringify(result);
+        correctLetter = JSON.stringify(underScores);
         console.log(correctLetter);
         var replaceLetter = correctLetter.indexOf(userChoice);
         console.log(replaceLetter);
