@@ -1,6 +1,6 @@
         //Array of Words
-        var wordsList = ['kitchen', 'backyard', 'frontyard', 'garage', 'bedroom', 'television', 'stove', 'table', 
-        'chair', 'couch', 'lamp', 'attic', 'bookshelf', 'closet', 'bathroom', 'sink'];
+        var wordsList = ['steven', 'brian', 'william', 'jacob', 'david', 'michael', 'paul', 'howard', 
+        'john', 'lance', 'christopher', 'matthew', 'mark', 'luke', 'peter', 'gary'];
         //Word Picked by the computer
         var chosenWord = '';
         //This is the letters that are in the chosenWord
