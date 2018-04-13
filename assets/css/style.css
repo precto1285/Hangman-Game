@@ -20,21 +20,20 @@ header{
     
 }
 .container{
-    width:80%;
-    background-image:url("../images/tombstone.png");
-    background-size: 50%;
-    border:none;
-    border-radius: 100px;
-    color:rgb(12, 4, 34);
-    margin:auto;
-    opacity:1.0;
+    width:100%;
+    background-color:black;
+    align-content: center;
+    opacity: 0.6;
+    border-radius: 35px;
 }
 sidebar{
-    background-color:beige;
+    background-color:tan;
+    color:grey;
 }
 footer{
     width:100%;
     border:ridge;
+    border-radius: 35px;
     margin-top: 10px;
     
 
